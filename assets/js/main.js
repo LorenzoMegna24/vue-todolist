@@ -19,7 +19,7 @@ const { createApp } = Vue
         ],
         
         TestoNewTodo: '',
-
+        error: false
         
       }
     },
@@ -34,9 +34,21 @@ const { createApp } = Vue
           text: this.TestoNewTodo,
           done: false
         };
-        this.todos.push(newObj)
-
+        if (newObj.text != '') {
+          this.todos.push(newObj)
+          this.error = false
+        }else{
+          this.error = true
+        }
       },
+
+      testoBarrato(){
+        if (this.todos.done = true) {
+          this.todos.done = false
+        }else if (this.todos.done = false) {
+          this.todos.done = true
+        }
+      }
 
 
     },
