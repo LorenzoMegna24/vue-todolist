@@ -20,6 +20,8 @@ const { createApp } = Vue
       }
     },
     methods:{
-
+      fatta(x){
+        this.todos.splice(x,1)
+      }
     }
   }).mount('#app')
