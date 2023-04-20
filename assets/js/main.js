@@ -16,12 +16,28 @@ const { createApp } = Vue
             text: 'Fare il bucato',
             done: false
           }
-        ]
+        ],
+        
+        TestoNewTodo: '',
+
+        
       }
     },
     methods:{
       fatta(x){
         this.todos.splice(x,1)
-      }
-    }
+      },
+
+      addTodo(){
+
+        let newObj = {
+          text: this.TestoNewTodo,
+          done: false
+        };
+        this.todos.push(newObj)
+
+      },
+
+
+    },
   }).mount('#app')
