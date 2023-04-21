@@ -42,13 +42,15 @@ const { createApp } = Vue
         }
       },
 
-      testoBarrato(){
-        if (this.todos.done = true) {
-          this.todos.done = false
-        }else if (this.todos.done = false) {
-          this.todos.done = true
+      testoBarrato(x, element){
+        
+        if (this.todos[x].done == false) {
+          this.todos[x].done = true
+        }else {
+          this.todos[x].done = false
         }
-      }
+       // element.done = !element.done
+       }
 
 
     },

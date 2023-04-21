@@ -26,10 +26,10 @@
         :key="index">
           <p class="m-0" 
           :class="(element.done == true) ? 'text-decoration-line-through' : '' "
-          @click="testoBarrato">
+          @click="testoBarrato(index)">
             {{element.text}}
           </p>
-          <span @click="fatta(index)"
+          <span @click="fatta(index, element)"
            class="pointer-event">
            X
           </span>
